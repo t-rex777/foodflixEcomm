@@ -1,0 +1,36 @@
+form {
+  margin : 50px auto;
+  padding: 4%;
+  border: solid white 2px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  width: 300px;
+}
+.header {
+  padding-bottom: 30px;
+}
+
+input {
+  border: solid;
+  width: 300px;
+  height: 30px;
+  margin-top: 7px;
+}
+.button_auth {
+  border: solid black;
+  margin-top: 15px;
+  font-size: 1.5rem;
+  width: 300px;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+button:hover{
+    background-color: #ffffff;
+    color : black;
+    transition-delay: 100ms;
+}

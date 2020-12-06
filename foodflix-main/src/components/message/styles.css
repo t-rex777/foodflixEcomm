@@ -1,0 +1,16 @@
+.success{
+    background-color: #ade498;
+    color : #206a5d;
+    height: 55px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.error {
+    background-color: #ff9a8c;
+    color: red;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,39 @@
+.container{
+    display : flex;
+    
+  }
+  
+  .left{
+    background-color: #bce6eb;
+    display : flex;
+    flex-direction : column;
+    width : 80vw;
+    
+    
+   
+  }
+  .right{
+    background-color: #fdcfdf;
+    margin-left : 30px;
+    width : 20vw;
+    color: black;
+  }
+  
+  .red{
+    background-color: red;
+    margin : 20px 0;
+    color: black;
+    height : 20vh;
+  }
+  .yellow{
+    background-color: yellow;
+    margin : 20px 0;
+    height : 20vh;
+    color: black;
+  }
+  .green{
+    background-color: #edf285;
+    margin : 20px 0;
+    height : 20vh;
+    color: black;
+  }
