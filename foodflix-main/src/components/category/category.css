@@ -1,0 +1,19 @@
+.category {
+  display: flex;
+  margin-left: 10px;
+}
+
+.content-box{
+    border: solid 1px white;
+    margin: 0 auto;
+    width: 270px;
+    padding : 2rem
+}
+
+.category_btn {
+  background-color: red;
+  margin:0  15px;
+  border-radius: 10px;
+  border: solid 1px black;
+  padding: 10px;
+}

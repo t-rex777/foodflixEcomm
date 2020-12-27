@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import Nav from './../Nav';
+import Nav from "./../Nav";
 
 function AdminDashboard({
   firstName = "manish kumar",
@@ -15,9 +15,11 @@ function AdminDashboard({
       <h1 className="header">Admin Dashboard</h1>
       <div className="flex">
         <div className="left-box">
-          <h3 className="btn">Show categories</h3>
-          <h3 className="btn">Show products</h3>
-          <h3 className="btn">Show Orders</h3>
+         
+            <a href="/categories" className="btn">Show categories</a>
+          
+          <a href="/categories" className="btn">Show products</a>
+          <a href="/categories" className="btn">Show Orders</a>
         </div>
         <div className="right-box">
           <h3>

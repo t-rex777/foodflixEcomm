@@ -12,7 +12,9 @@ mongoose.connect("mongodb://localhost:27017/foodflixDB", {
 })
 .then(()=>{
   console.log("DATABASE connected")
-});
+})
+.catch(err=>console.log(err));
+
 
 
 //middlewares

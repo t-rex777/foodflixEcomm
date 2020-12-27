@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import Nav from './../Nav';
 
 function UserDashboard({
   firstName = "manish kumar",
@@ -10,6 +11,7 @@ function UserDashboard({
 }) {
   return (
     <div className="container">
+      <Nav />
       <h1 className="header">User Dashboard</h1>
       <div className="flex">
         <div className="left-box">

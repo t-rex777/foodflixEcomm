@@ -40,6 +40,12 @@
   font-size: 1.5rem;
 }
 
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .btn {
   background-color: red;
   margin: 5px;
@@ -50,4 +56,23 @@
 .btn:hover {
   background-color: #fff;
   color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .header{
+    font-size: 3rem;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-box {
+    margin: 10px auto;
+    width: 70%;
+  }
+  .right-box{
+    margin: 30px auto;
+    width: 70%;
+    font-size: 1.1rem;
+  }
 }
