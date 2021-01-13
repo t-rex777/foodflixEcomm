@@ -1,19 +1,28 @@
 .category {
   display: flex;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  justify-content: space-between;
 }
 
 .content-box{
     border: solid 1px white;
     margin: 0 auto;
-    width: 270px;
-    padding : 2rem
+    width: 50vw;
+    padding : 2rem;
 }
 
 .category_btn {
   background-color: red;
   margin:0  15px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: solid 1px black;
   padding: 10px;
 }
+
+.add{
+  border: solid 1px black;
+  background-color: #fff;
+  color: black;
+  padding : 0.5rem;
+}
+

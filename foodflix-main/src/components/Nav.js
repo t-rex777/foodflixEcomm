@@ -80,7 +80,9 @@ function Nav({ history }) {
           setInfo(true);
         }}
         onMouseLeave={() => {
-          setInfo(false);
+          setTimeout(() => {
+            setInfo(false);
+          }, 1000);
         }}
       >
         <Link to={decideRole()}>

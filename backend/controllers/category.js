@@ -21,23 +21,15 @@ exports.createCategory = (req, res) => {
         error: "Category did not saved in the database",
       });
     }
-  return res.json({category});
+   res.json({category});
   });
 };
 
 //read
 
-// exports.getCategory = (req,res,id)=>{
-//   Category.findById(id)
-//   .exec((err,category)=>{
-//     if(err){
-//       return res.status(400).json({
-//         error: `Category not found in the database`
-//       });
-//     }
-//     return res.send(id);
-//   })
-// }
+exports.getCategory = (req,res)=>{
+ return res.json(req.category)
+}
 
 exports.getAllCategories = (req, res) => {
   Category.find({}, (err, categories) => {

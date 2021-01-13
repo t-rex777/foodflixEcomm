@@ -1,0 +1,27 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 78vw;
+}
+
+.product_btn{
+    display: flex;
+}
+.change_btn{
+    margin : 5px 10px 0 0;
+    padding : 7px 10px;
+    border : solid 1px #fff;
+}
+.change_btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.card {
+    margin : 10px
+}
+
+.card_image{
+    width: 220px;
+    height:180px ;
+}

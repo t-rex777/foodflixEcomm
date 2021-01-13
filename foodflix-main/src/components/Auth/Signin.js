@@ -5,6 +5,7 @@ import "./signin.css";
 import SuccessMessage from "../message/SuccessMessage";
 import ErrorMessage from "./../message/ErrorMessage";
 import { Redirect } from "react-router-dom";
+import Nav from './../Nav';
 
 function Signin() {
   const [data, setData] = useState({
@@ -107,6 +108,7 @@ function Signin() {
 
   return (
     <div>
+      <Nav/>
       {SignInForm()}
       {DoRedirect()}
     </div>

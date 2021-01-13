@@ -1,29 +1,84 @@
 import React from "react";
-import { showCategories } from "./helper";
+import { addCategory, showCategories, deleteCategory } from "./helper";
 import { useState } from "react";
 import { useEffect } from "react";
-import Nav from "./../Nav";
-import "./category.css"
+import "./category.css";
+import { isAuthenticated } from "../Auth/helper";
+import Base from "./../Base/Base";
 
 function Category() {
   const [category, setCategory] = useState([]);
+  const [category_name, setNewCategory] = useState("");
+  const {
+    token,
+    user: { _id },
+  } = isAuthenticated();
+
 
   useEffect(() => {
     showCategories().then((item) => setCategory(item));
   }, []);
+
+  const addNewCategory = (e) => {
+    e.preventDefault();
+
+    addCategory(_id, token, { category_name })
+      .then((newCate) => {
+        window.location.reload();
+        console.log(newCate);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const handleChange = (e) => {
+    const newCate = e.target.value;
+    setNewCategory((prevValue) => {
+      return newCate;
+    });
+  };
   return (
-    <div className="container">
-      <Nav />
-      <h1 className="header">Categories</h1>
-      <div className="content-box">
+    <Base header="Category">
+      <div className="">
         {category.map((cate) => (
-          <div className="category">
-            <h2 key={cate._id}>{cate.category_name}</h2>
-            <button className="category_btn">Remove</button>
+          <div key={cate._id} className="category">
+            <p>{cate.category_name}</p>
+            {/* <button
+            type="submit"
+            className="category_btn"
+            onClick={updateCategory}
+          >
+            Update
+          </button> */}
+            {/* have to add update category button */}
+            <button
+              className="category_btn"
+              onClick={() => {
+                deleteCategory(_id, cate._id, token)
+                  .then(() => {
+                    window.location.reload();
+                  })
+                  .catch((err) => console.log(err));
+              }}
+            >
+              Remove
+            </button>
           </div>
         ))}
+
+        <input
+          type="text"
+          name="addCategory"
+          value={category_name}
+          onChange={handleChange}
+          
+        />
+        <br />
+
+        <button type="submit" className="add" onClick={addNewCategory}>
+          Add
+        </button>
       </div>
-    </div>
+    </Base>
   );
 }
 

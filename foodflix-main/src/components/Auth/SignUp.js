@@ -5,6 +5,7 @@ import { signup } from "./helper";
 import SuccessMessage from "../message/SuccessMessage";
 import ErrorMessage from "./../message/ErrorMessage";
 import { Redirect } from "react-router-dom";
+import Nav from './../Nav';
 
 function Signup() {
   const [data, setData] = useState({
@@ -33,6 +34,9 @@ function Signup() {
 
   const handleClick = (e) => {
     e.preventDefault();
+    if(data.password !== data.confirmPassword){
+      window.alert("Both passwords do not match!");
+    }
 
     signup({ firstName, lastName, email, password, userinfo })
       .then((response) => {
@@ -50,6 +54,7 @@ function Signup() {
 
   return (
     <div className="">
+      <Nav/>
       <form>
         {data.success && <SuccessMessage message="User Created Successfully" />}
         {data.error && (

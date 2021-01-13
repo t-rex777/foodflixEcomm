@@ -19,6 +19,7 @@ exports.getProductdById = (req, res, next, id) => {
     });
 };
 
+
 //Create
 exports.createProduct = (req, res) => {
   let form = new formidable.IncomingForm();
@@ -29,6 +30,7 @@ exports.createProduct = (req, res) => {
       return res.status(400).json({
         error: "problem with the image",
       });
+      // console.log(err);
     }
     //destructuring the fields
     const { product_name, description, category, price, stock } = fields;
@@ -69,6 +71,17 @@ exports.getAllProducts = (req, res) => {
   //req.product.photo = undefined;
   return res.json(req.product);
 };
+
+exports.getProduct = (req,res)=>{
+  return res.json(req.product)
+}
+
+exports.getProductPic = (req,res) => {
+  if(req.product.photo.data){
+    res.set("Content-Type",req.product.photo.contentType)
+    return res.send(req.product.photo.data);
+  }
+}
 
 //Middleware
 exports.photo = (req, res, next) => {

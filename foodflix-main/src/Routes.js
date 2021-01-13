@@ -9,6 +9,9 @@ import UserDashboard from './components/dashboard/UserDashboard';
 import AdminRoute from './components/AuthenticatedRoutes/AdminRoute';
 import PrivateRoute from './components/AuthenticatedRoutes/PrivateRoute';
 import Category from './components/category/Category';
+import Product from './product/Product';
+import AddProduct from './product/AddProduct';
+import UpdateProduct from './product/UpdateProduct';
 
 
 function Routes() {
@@ -21,6 +24,9 @@ function Routes() {
         <Route path="/signup" exact component={Signup} />
         <AdminRoute path="/admin/dashboard" exact component={AdminDashboard} />
         <AdminRoute path="/categories" exact component={Category} />
+        <AdminRoute path="/products" exact component={Product} />
+        <AdminRoute path="/create/product" exact component={AddProduct} />
+        <AdminRoute path="/update/product/:productId" exact component={UpdateProduct} />
         <PrivateRoute path="/user/dashboard" exact component={UserDashboard} />
       </Switch>
     </BrowserRouter>
