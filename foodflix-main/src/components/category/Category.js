@@ -14,7 +14,6 @@ function Category() {
     user: { _id },
   } = isAuthenticated();
 
-
   useEffect(() => {
     showCategories().then((item) => setCategory(item));
   }, []);
@@ -38,7 +37,7 @@ function Category() {
   };
   return (
     <Base header="Category">
-      <div className="">
+      <div className="cateBody">
         {category.map((cate) => (
           <div key={cate._id} className="category">
             <p>{cate.category_name}</p>
@@ -70,7 +69,6 @@ function Category() {
           name="addCategory"
           value={category_name}
           onChange={handleChange}
-          
         />
         <br />
 

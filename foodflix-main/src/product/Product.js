@@ -18,6 +18,8 @@ function Product() {
 
   return (
     <Base header="Products">
+            <Link to="/create/product" className="change_btn add">Add a Product</Link>
+
       <div className="products">
         {product.map((pro) => (
           <div key={pro._id}>
@@ -45,7 +47,6 @@ function Product() {
         ))}
       </div>
 
-      <a href="/create/product" className="change_btn">Add product</a>
     </Base>
   );
 }

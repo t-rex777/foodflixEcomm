@@ -3,7 +3,6 @@ import { isAuthenticated } from "../components/Auth/helper";
 import Base from "./../components/Base/Base";
 import {
   showCategories,
-  getCategoryByCategoryId,
 } from "./../components/category/helper";
 import { updateTheProduct, getProductByProductId } from "./helper";
 import SuccessMessage from "./../components/message/SuccessMessage";

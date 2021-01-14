@@ -8,17 +8,7 @@ function Nav({ history }) {
   const [info, setInfo] = useState(false);
   const [isSignout, setSignOut] = useState(false);
 
-  const decideRole = () => {
-    if (isAuthenticated()) {
-      if (isAuthenticated().user.role === 1) {
-        return "admin/dashboard";
-      } else {
-        return "user/dashboard";
-      }
-    } else {
-      return "/signin";
-    }
-  };
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -52,6 +42,10 @@ function Nav({ history }) {
       <p className="infobox_p">
         {isAuthenticated().user.role === 1 ? "Admin" : "User"}
       </p>
+      <Link to="/admin/dashboard">
+        <button className="infobox_items">Dashboard</button>
+      </Link>
+
       <button className="infobox_items" onClick={signOut}>
         Log Out
       </button>
@@ -85,7 +79,15 @@ function Nav({ history }) {
           }, 1000);
         }}
       >
-        <Link to={decideRole()}>
+        <Link
+          to={
+            isAuthenticated()
+              ? (isAuthenticated().user.role === 1
+                ? "/admin/dashboard"
+                : "/user/dashboard")
+              : ("/signin")
+          }
+        >
           <img
             className="nav_avatar"
             src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png"

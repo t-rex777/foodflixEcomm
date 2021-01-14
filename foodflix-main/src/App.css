@@ -133,6 +133,7 @@
 .navUserInfo{
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   position:fixed;
   right:5px;
   margin-top: 60px;

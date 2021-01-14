@@ -23,6 +23,17 @@
   border: solid 1px black;
   background-color: #fff;
   color: black;
-  padding : 0.5rem;
+  padding : 0.5rem 1.5rem;
+  margin-top: 10px;
 }
 
+.cateBody{
+  border : solid 1px white;
+  padding : 20px;
+}
+
+@media screen and (max-width:413px){
+  input{
+    width: 200px;
+  }
+}
