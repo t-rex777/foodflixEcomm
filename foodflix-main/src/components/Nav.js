@@ -42,7 +42,7 @@ function Nav({ history }) {
       <p className="infobox_p">
         {isAuthenticated().user.role === 1 ? "Admin" : "User"}
       </p>
-      <Link to="/admin/dashboard">
+      <Link to="/admin/dashboard" style={{width:"100px"}}>
         <button className="infobox_items">Dashboard</button>
       </Link>
 

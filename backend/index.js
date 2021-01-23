@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/foodflixDB", {
+mongoose.connect("mongodb+srv://admin_manish:manish1408@cluster0.r7gze.mongodb.net/foodflixDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true

@@ -33,9 +33,9 @@ exports.createProduct = (req, res) => {
       // console.log(err);
     }
     //destructuring the fields
-    const { product_name, description, category, price, stock } = fields;
+    const { product_name, description, category, price } = fields;
 
-    if (!product_name || !description || !category || !price || !stock) {
+    if (!product_name || !description || !category || !price ) {
       return res.status(400).json({
         error: "Please fill all fields.",
       });
@@ -151,7 +151,7 @@ exports.deleteProduct = (req, res) => {
 //*********************to read all these*******************************
 
 exports.getAllProducts = (req, res) => {
-  let limit = req.query.limit ? parseInt(req.query.limit) : 8;
+  let limit = req.query.limit ? parseInt(req.query.limit) : 100;
   let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
 
   Product.find()

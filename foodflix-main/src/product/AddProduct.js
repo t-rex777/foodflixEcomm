@@ -16,8 +16,6 @@ function AddProduct() {
     category: "",
     categories: [],
     price: "",
-    stock: "",
-    sold: "",
     photo: "",
     formData: "",
     success: "",
@@ -95,8 +93,10 @@ function AddProduct() {
             name="category"
             onChange={handleChange("category")}
             placeholder="category"
+            style={{width : "100%", height: "30px", border: "solid 2px white"}}
+            
           >
-            <option>Select</option>
+            <option >Select</option>
             {product.categories.map((cate, index) => (
               <option key={index} value={cate._id}>
                 {cate.category_name}
@@ -113,24 +113,7 @@ function AddProduct() {
             onChange={handleChange("price")}
           />
         </label>
-        <label>
-          Product Stock :
-          <input
-            type="text"
-            name="stock"
-            value={product.stock}
-            onChange={handleChange("stock")}
-          />
-        </label>
-        <label>
-          Product Sold :
-          <input
-            type="text"
-            name="sold"
-            value={product.sold}
-            onChange={handleChange("sold")}
-          />
-        </label>
+        
         <label>
           Product Photo :
           <input
@@ -141,7 +124,9 @@ function AddProduct() {
             onChange={handleChange("photo")}
           />
         </label>
-        <button type="submit" onClick={onSubmit}>
+        <button 
+        className="add"
+        type="submit" onClick={onSubmit}>
           Add Product
         </button>
       </form>

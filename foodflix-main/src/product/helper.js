@@ -6,7 +6,6 @@ export const getProductByProductId = (productId) => {
   .catch(err=>console.log(err))
 }
 
-
 export const getProducts = () => {
   return fetch(`${API}/products`)
     .then((res) => res.json())

@@ -24,8 +24,7 @@ function Product() {
         {product.map((pro) => (
           <div key={pro._id}>
             <Card product={pro}>
-              <p>stock : {pro.stock}</p>
-              <p>sold : {pro.sold}</p>
+            
               <div className="product_btn">
               <Link to={`/update/product/${pro._id}`}>
                 <button className="change_btn">Update</button>

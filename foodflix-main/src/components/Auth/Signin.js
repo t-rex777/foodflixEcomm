@@ -9,8 +9,8 @@ import Nav from './../Nav';
 
 function Signin() {
   const [data, setData] = useState({
-    email: "msahu007@gmail.com",
-    password: "123456789",
+    email: "manish@admin.com",
+    password: "iamadmin",
     success: "",
     error: "",
     didRedirect: "",
