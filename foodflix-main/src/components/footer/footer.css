@@ -1,0 +1,13 @@
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: #045762;
+
+}
+
+.footer_item{
+    width: 300px;
+    margin: 10px auto;
+    background-color: #045762;
+
+}

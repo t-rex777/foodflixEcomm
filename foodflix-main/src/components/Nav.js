@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import logo from "../foodflix-logo.png";
 import { isAuthenticated, signout } from "./Auth/helper";
 
-function Nav({ history }) {
+function Nav() {
   const [scroll, setScroll] = useState();
   const [info, setInfo] = useState(false);
   const [isSignout, setSignOut] = useState(false);
@@ -42,7 +42,7 @@ function Nav({ history }) {
       <p className="infobox_p">
         {isAuthenticated().user.role === 1 ? "Admin" : "User"}
       </p>
-      <Link to="/admin/dashboard" style={{width:"100px"}}>
+      <Link to={isAuthenticated().user.role === 1 ?"/admin/dashboard": "/user/dashboard"} style={{width:"100px"}}>
         <button className="infobox_items">Dashboard</button>
       </Link>
 

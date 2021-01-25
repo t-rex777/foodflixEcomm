@@ -13,7 +13,7 @@ function Row({ recipe, title }) {
         {item.map((pro, i) => {
           if (pro !== "")
             return (
-              <Card product={pro} className="image">
+              <Card product={pro} className="image" key={i}>
                 <button className="infobox_items ">Add to Cart</button>
                 <button
                   className="infobox_items"

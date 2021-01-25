@@ -11,7 +11,6 @@ function Signup() {
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
-    role: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -35,7 +34,7 @@ function Signup() {
   const handleClick = (e) => {
     e.preventDefault();
     if(data.password !== data.confirmPassword){
-      window.alert("Both passwords do not match!");
+     return window.alert("Both passwords do not match!");
     }
 
     signup({ firstName, lastName, email, password, userinfo })
@@ -82,13 +81,7 @@ function Signup() {
           name="email"
           onChange={handleChange}
         />
-        <label>Role</label>
-        <input
-          type="text"
-          value={data.role}
-          name="role"
-          onChange={handleChange}
-        />
+        
 
         <label>Password </label>
         <input

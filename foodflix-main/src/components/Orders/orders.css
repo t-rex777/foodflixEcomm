@@ -1,0 +1,47 @@
+.orders{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.status{
+    width: 150px;
+    height: 50px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 10px;
+    color:black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.orange{
+    background-color: orange;
+}
+.pink{
+    background-color: pink;
+}
+
+.status_button{
+    width: 130px;
+    height: 50px;
+    margin-inline-end: 10px;
+    font-size: 1.5rem;
+    background-color: #4e3d53;
+    border : solid 1px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

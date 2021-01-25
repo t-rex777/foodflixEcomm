@@ -1,4 +1,4 @@
-import { getProducts, imageHelper } from "./../../product/helper";
+import { getProducts } from "./../../product/helper";
 
 export const foodList = {
   fastfoods: getProducts().then((data) =>

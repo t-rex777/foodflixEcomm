@@ -4,6 +4,8 @@ import Nav from "./../Nav";
 import { Link } from "react-router-dom";
 import * as GiIcons from "react-icons/gi";
 import * as AiIcons from "react-icons/ai";
+import { isAuthenticated } from "../Auth/helper";
+import Footer from './../footer/Footer';
 
 function Base({ header, children }) {
   var [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -26,18 +28,30 @@ function Base({ header, children }) {
         <Link to="/" className="btn">
           Home
         </Link>
-        <Link to="/admin/dashboard" className="btn" onClick={handleClick}>
+        <Link
+          to={
+            isAuthenticated().user.role === 1
+              ? "/admin/dashboard"
+              : "/user/dashboard"
+          }
+          className="btn"
+          onClick={handleClick}
+        >
           Dashboard
         </Link>
-        <Link to="/categories" className="btn">
-          Categories
-        </Link>
+        {isAuthenticated().user.role === 1 && (
+          <>
+            <Link to="/categories" className="btn">
+              Categories
+            </Link>
 
-        <Link to="/products" className="btn">
-          Products
-        </Link>
+            <Link to="/products" className="btn">
+              Products
+            </Link>
+          </>
+        )}
 
-        <Link to="/orders" className="btn">
+        <Link to={isAuthenticated().user.role === 1? "/admin/orders" : "/user/orders"} className="btn">
           Orders
         </Link>
         <Link to="/help" className="btn">
@@ -80,6 +94,7 @@ function Base({ header, children }) {
       <Nav />
       <h1 className="header">{header}</h1>
       {screenWidth > 800 ? fullNav() : sideNav()}
+      <Footer/>
     </div>
   );
 }

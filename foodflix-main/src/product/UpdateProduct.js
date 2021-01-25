@@ -49,7 +49,7 @@ function UpdateProduct({ match }) {
 
   useEffect(() => {
     preLoad();
-  }, []);
+  });
 
   const handleChange = (name) => (event) => {
     const value = name === "photo" ? event.target.files[0] : event.target.value;
@@ -157,7 +157,7 @@ function UpdateProduct({ match }) {
             onChange={handleChange("photo")}
           />
         </label>
-        <button type="submit" onClick={onSubmit}>
+        <button type="submit" className="add" onClick={onSubmit}>
           Update Product
         </button>
       </form>

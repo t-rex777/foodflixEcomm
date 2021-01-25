@@ -1,0 +1,19 @@
+.help{
+    display: flex;
+}
+
+
+.address{
+   width : 20vw;
+   margin :auto 50px;
+}
+
+@media only screen and (max-width:785px){
+    .help{
+        flex-direction: column;
+    }
+    .address{
+        width: 300px;
+        margin : 0 auto;
+     }
+}
