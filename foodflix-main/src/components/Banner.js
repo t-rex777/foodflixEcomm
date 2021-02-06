@@ -1,13 +1,7 @@
 import React from "react";
-// import { foodList } from "./foodUrl/URL";
+import { Link } from 'react-router-dom';
 
 function Banner() {
-  // const [state, setstate] = useState();
-  // const pickRandom = Math.floor(Math.random() * 10);
-
-  // useEffect(() => {
-  //   setstate(foodList.fastfoods[pickRandom]);
-  // }, []);
 
   return (
     <header
@@ -23,8 +17,8 @@ function Banner() {
           NOTHING BRINGS PEOPLE TOGETHER LIKE GOOD FOOD
         </h1>
         <div className="banner_buttons">
-          <button className="banner_button">Order Now!</button>
-          <button className="banner_button btn_white">Contact Us</button>
+         <Link style={{backgroundColor:"transparent"}} to=""> <button className="banner_button">Order Now!</button></Link> 
+          <Link style={{backgroundColor:"transparent"}} to="/help"><button className="banner_button btn_white">Contact Us</button></Link>
         </div>
       </div>
       <div className="lower-banner"></div>

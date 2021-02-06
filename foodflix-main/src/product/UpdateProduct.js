@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { isAuthenticated } from "../components/Auth/helper";
 import Base from "./../components/Base/Base";
-import {
-  showCategories,
-} from "./../components/category/helper";
+import { showCategories } from "./../components/category/helper";
 import { updateTheProduct, getProductByProductId } from "./helper";
 import SuccessMessage from "./../components/message/SuccessMessage";
 import ErrorMessage from "./../components/message/ErrorMessage";
@@ -49,7 +47,7 @@ function UpdateProduct({ match }) {
 
   useEffect(() => {
     preLoad();
-  });
+  },[]);
 
   const handleChange = (name) => (event) => {
     const value = name === "photo" ? event.target.files[0] : event.target.value;
@@ -129,24 +127,7 @@ function UpdateProduct({ match }) {
             onChange={handleChange("price")}
           />
         </label>
-        <label>
-          Product Stock :
-          <input
-            type="text"
-            name="stock"
-            value={product.stock}
-            onChange={handleChange("stock")}
-          />
-        </label>
-        <label>
-          Product Sold :
-          <input
-            type="text"
-            name="sold"
-            value={product.sold}
-            onChange={handleChange("sold")}
-          />
-        </label>
+
         <label>
           Product Photo :
           <input
