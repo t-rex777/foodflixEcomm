@@ -6,6 +6,7 @@ import SuccessMessage from "../message/SuccessMessage";
 import ErrorMessage from "./../message/ErrorMessage";
 import { Redirect } from "react-router-dom";
 import Nav from './../Nav';
+import Footer from './../footer/Footer';
 
 function Signin() {
   const [data, setData] = useState({
@@ -111,6 +112,7 @@ function Signin() {
       <Nav/>
       {SignInForm()}
       {DoRedirect()}
+      <Footer/>
     </div>
   );
 }

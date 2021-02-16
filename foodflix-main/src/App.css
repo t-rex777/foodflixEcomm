@@ -1,10 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Montserrat&display=swap");
 * {
   margin: 0;
   background-color: #111;
   color: #fff;
 }
 
-.row_title{
+/* h1,h2,h3,h4,h5,h6{
+  font-family: 'Lora', serif;
+  font-weight: 600;
+} */
+
+p,td,a{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.row_title {
   margin-left: 20px;
 }
 
@@ -45,14 +55,14 @@
 .banner_text {
   background-color: transparent;
   padding: 30px;
-  font-size: 2rem ;
+  font-size: 2rem;
   color: white;
   width: 36%;
 }
-.banner_buttons{
+.banner_buttons {
   display: flex;
   background-color: transparent;
-  z-index:1;
+  z-index: 1;
 }
 .banner_button {
   cursor: pointer;
@@ -62,16 +72,16 @@
   border: none;
   font-weight: 700;
   border-radius: 0.2vw;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   background-color: rgba(51, 51, 51, 0.5);
 }
 
-.cartButton{
+.cartButton {
   font-size: 1rem;
-  padding: 0.5rem 0.12rem; 
-  margin : 0.5rem;
+  padding: 0.5rem 0.12rem;
+  margin: 0.5rem;
   background-color: red;
   color: #000;
 }
@@ -81,11 +91,11 @@
   background-color: #fff;
   transition: all 0.2s;
 }
-.btn_white{
+.btn_white {
   color: #000;
   background-color: #fff;
 }
-.btn_white:hover{
+.btn_white:hover {
   background-color: #000;
   color: #fff;
 }
@@ -141,58 +151,56 @@
   margin-top: 5px;
 }
 
-
-.navUserInfo{
-  position:fixed;
-  right:5px;
+.navUserInfo {
+  position: fixed;
+  right: 5px;
   margin-top: 60px;
   padding: 20px;
   /* height : 150px; */
   width: 200px;
-  border : solid 1px white;
+  border: solid 1px white;
   border-radius: 10px;
 }
 
-.infobox_items{
+.infobox_items {
   width: 100px;
   font-size: 1rem;
-  margin: 5px auto ;
-  padding : 8px;
+  margin: 5px auto;
+  padding: 8px;
   text-decoration: none;
-  border : solid 1px black;
-  border-radius : 5px;
+  border: solid 1px black;
+  border-radius: 5px;
   background-color: red;
 }
 
-.infobox_items:hover{
+.infobox_items:hover {
   background-color: #fff;
   color: black;
 }
 
-.infobox_p{
+.infobox_p {
   /* width: 100px; */
   font-size: 1.2rem;
-  margin: 5px auto ;
-  padding : 8px;
+  margin: 5px auto;
+  padding: 8px;
   text-decoration: none;
   /* border : solid 1px black; */
-  border-radius : 10px;
+  border-radius: 10px;
   /* background-color: red; */
 }
-.dropdown{
+.dropdown {
   display: none;
 }
-.dropdown:hover{
+.dropdown:hover {
   display: block;
 }
 
-
-@media only screen and (max-width:750px){
-  .upper-banner{
+@media only screen and (max-width: 750px) {
+  .upper-banner {
     display: flex;
     align-items: center;
   }
-  .banner_button{
+  .banner_button {
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -200,16 +208,16 @@
     margin-left: 15px;
   }
 
-  .banner_text{
+  .banner_text {
     margin-top: 35px;
     background-color: transparent;
     padding: 0px 20px 20px 0px;
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
     color: white;
     width: 36%;
   }
 
-  .nav_avatar{
+  .nav_avatar {
     object-fit: contain;
     width: 30px;
     position: fixed;

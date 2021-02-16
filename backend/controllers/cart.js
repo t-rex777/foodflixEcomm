@@ -1,4 +1,3 @@
-const cart = require("../models/cart");
 const Cart = require("../models/cart");
 
 exports.getProductsFromCart = (req, res) => {
@@ -13,7 +12,13 @@ exports.getProductsFromCart = (req, res) => {
 };
 
 exports.addProductToCart = (req, res) => {
-  const cartProduct = new Cart(req.body);
+  const cartProduct = new Cart({
+    user : req.params.userId,
+    productId : req.params.productId,
+    productName : req.body.product_name,
+    price : req.body.price
+  });
+
   cartProduct.save((err, pro) => {
     if (err) {
       return res.status(400).json({
